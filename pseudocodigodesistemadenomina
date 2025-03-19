@@ -1,0 +1,36 @@
+# Entrada de datos
+pago_por_dia = float(input("Ingrese el pago por día: "))
+dias_trabajados = int(input("Ingrese los días trabajados: "))
+dias_faltados = int(input("Ingrese los días faltados: "))
+horas_extras = int(input("Ingrese las horas extras trabajadas: "))
+pago_por_hora_extra = float(input("Ingrese el pago por hora extra: "))
+descuento_por_falta = float(input("Ingrese el descuento por falta: "))
+
+# Cálculo del salario base
+salario_base = dias_trabajados * pago_por_dia
+
+# Cálculo del pago por horas extras
+pago_horas_extras = horas_extras * pago_por_hora_extra
+
+# Cálculo del descuento por faltas
+descuento_faltas = dias_faltados * descuento_por_falta
+
+# Cálculo del salario bruto
+salario_bruto = salario_base + pago_horas_extras
+
+# Cálculo del salario neto
+salario_neto = salario_bruto - descuento_faltas
+
+# Mostrar resultados detallados
+print("\n--- Resumen de Nómina ---")
+print(f"Días trabajados: {dias_trabajados}")
+print(f"Días faltados: {dias_faltados}")
+print(f"Horas extras trabajadas: {horas_extras}")
+print(f"Pago por día: ${pago_por_dia:.2f}")
+print(f"Pago por hora extra: ${pago_por_hora_extra:.2f}")
+print(f"Descuento por falta: ${descuento_por_falta:.2f}")
+print(f"Salario base: ${salario_base:.2f}")
+print(f"Pago por horas extras: ${pago_horas_extras:.2f}")
+print(f"Descuento por faltas: ${descuento_faltas:.2f}")
+print(f"Salario bruto: ${salario_bruto:.2f}")
+print(f"Salario neto: ${salario_neto:.2f}")
